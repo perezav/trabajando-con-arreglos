@@ -28,7 +28,6 @@ const strangeArray = [
 function showList(array) {
   const container = document.getElementById("list");
   container.innerHTML = "";
-// Más info de forEach => https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
   array.forEach((element) => {
     const li = document.createElement("li");
     li.appendChild(document.createTextNode(element));
@@ -38,7 +37,7 @@ function showList(array) {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   const strings = strangeArray.filter(elemento => typeof (elemento) === 'string');
-  strings.sort(function(a, b){
+  strings.sort(function (a, b) {
     return a.localeCompare(b);
   });
   showList(strings);
